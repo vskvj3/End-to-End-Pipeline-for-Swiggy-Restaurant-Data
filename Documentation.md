@@ -10,7 +10,7 @@ The goal of this project is to develop a robust data pipeline that extracts, tra
 ---
 
 ## 2. Project Architecture Diagram
-> to be inserted
+![Architecture](Images/Architecture/architecture.png)
 
 ---
 
