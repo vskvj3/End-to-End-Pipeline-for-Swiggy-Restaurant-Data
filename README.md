@@ -3,7 +3,7 @@
 ## Overview  
 This project focuses on building a data engineering pipeline for analyzing restaurant data sourced from various cities by the swiggy platform. The data is processed, transformed, and analyzed using tools including PySpark, Spark SQL, and Azure Data Factory. The final outputs include insights into restaurant ratings, cuisines, and trends presented in dashboards and reports. 
 
-> For detailed documentaion See [Technical Design Document](DOCUMENTATION.md)
+> For detailed documentaion See [Technical Design Document](Documentation.md)
 
 ## Features  
 - **Data Ingestion**: Data from JSON and other sources is ingested into Azure Data Lake using Azure Data Factory.  
