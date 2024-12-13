@@ -1,0 +1,39 @@
+{
+    "Abohar": {
+        "link": "https://www.swiggy.com/city/abohar",
+        "restaurants": {
+            "567335": {
+                "name": "AB FOODS POINT",
+                "rating": "--",
+                "rating_count": "Too Few Ratings",
+                "cost": "\u20b9 200",
+                "address": "AB FOODS POINT, NEAR RISHI NARANG DENTAL CLINIC , NEAR IDBI BANK, ABOHAR",
+                "cuisine": "Beverages,Pizzas",
+                "lic_no": "22122652000138",
+                "menu": {
+                    "Burger": {
+                        "Aloo Tikki Burger": {
+                            "price": "40",
+                            "veg_or_non_veg": "Veg"
+                        },
+                        "Veg Creamy Burger": {
+                            "price": "50",
+                            "veg_or_non_veg": "Veg"
+                        }
+                    },
+                    "Pasta Must Try": {
+                        "White Sauce": {
+                            "price": "100",
+                            "veg_or_non_veg": "Veg"
+                        },
+                        "Red Sauce": {
+                            "price": "100",
+                            "veg_or_non_veg": "Veg"
+                        }
+                    }
+                },
+                "link": "https://www.swiggy.com/restaurants/ab-foods-point-central-abohar-abohar-567335"
+            }
+        }
+    }
+}
