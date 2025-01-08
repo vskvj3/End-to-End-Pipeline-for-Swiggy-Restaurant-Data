@@ -18,7 +18,7 @@ The goal of this project is to develop a robust data pipeline that extracts, tra
 The project adopts a **Medallion Architecture** with bronze, silver, and gold data layers. This model organizes data into distinct layers based on their level of processing and refinement.
 
 ### 3.1. Data Ingestion (Bronze Layer):
-- **Source**: Raw data (CSV file)
+- **Source**: Raw data (JSON file)
 - **Ingestion Tool**: Azure Data Factory
 - **Storage**: Azure Data Lake Storage Gen2
 
@@ -31,30 +31,34 @@ The project adopts a **Medallion Architecture** with bronze, silver, and gold da
 
 ### 3.4. Data Analysis & Visualization:
 - **Tools for Analysis**: Databricks (SQL queries)
-- **Visualization Tool**: Power BI or Databricks visualizations
+- **Visualization Tool**: Databricks visualizations
 
 ---
 
 ## 4. Implementation Plan
 
 ### 4.1. Data Ingestion and Storage
-- Identify the raw data sources (e.g., CSV files).
+- Identify the raw data sources (JOSN file in HTTP Source).
 - Set up an Azure Data Factory pipeline for ingestion.
-  - Configure activities like the Copy Activity to transfer data from source systems to Azure Data Lake Storage Gen2.
+  - Configure Copy Activity to transfer data from source system to Azure Data Lake Storage Gen2.
 
-### 4.2. Data Transformation and Cleaning
+### 4.2. Data Extraction
+- Convert raw JSON data into a structured format suitable for transformations and analysis.
+- Save the extracted data as Parquet files in ADLS Gen2.
+
+### 4.3. Data Transformation and Cleaning
 - Establish an Azure Databricks workspace.
 - Use PySpark to clean and transform the data.
-- Apply performance optimization techniques:
+- Apply possible performance optimization techniques:
   - **Caching**
   - **Partitioning**
   - **Indexing**
 - Store the transformed data in Delta Lake tables for efficient querying and updates.
 
-### 4.3. Data Analysis and Visualization
+### 4.4. Data Analysis and Visualization
 - Prepare transformed data for analysis with additional cleaning or transformations.
 - Use Databricks notebooks for SQL-based analysis.
-- Create interactive dashboards and reports using Power BI or Databricks visualizations.
+- Create interactive dashboards and reports using Databricks visualizations.
 
 ---
 
@@ -113,28 +117,3 @@ The project adopts a **Medallion Architecture** with bronze, silver, and gold da
 | Message         | STRING        | Log messages, if any.                    |
 
 ---
-
-## 7. Testing
-
-### Data Accuracy
-
-| **Test Case ID** | **Description**                                   | **Steps**                              | **Expected Outcome**                         | **Negative Scenario**                      |
-|-------------------|--------------------------------------------------|----------------------------------------|---------------------------------------------|--------------------------------------------|
-| DA-01            | Verify all required fields are present.          | Check id, name, city, etc., for null.  | All fields are present.                     | Missing fields result in an error.         |
-| DA-02            | Verify `id` is unique.                           | Check for duplicates in `id`.          | No duplicate ids.                           | Duplicate ids trigger an error.            |
-| DA-03            | Validate `rating` values.                        | Ensure ratings are between 0-5.        | Ratings within range.                       | Invalid or out-of-range ratings.           |
-
-### Data Quality
-
-| **Test Case ID** | **Description**                                   | **Steps**                              | **Expected Outcome**                         | **Negative Scenario**                      |
-|-------------------|--------------------------------------------------|----------------------------------------|---------------------------------------------|--------------------------------------------|
-| DQ-01            | Verify null/NaN fields.                          | Check for null/NaN values.             | No null values in columns.                  | Presence of null values.                   |
-| DQ-08            | Validate unique license numbers.                 | Check for duplicates in `lic_no`.      | Each restaurant has a unique license.       | Duplicate license numbers.                 |
-
----
-
-## 8. Data Security
-
-| **Test Case ID** | **Description**                                   | **Steps**                              | **Expected Outcome**                         | **Negative Scenario**                      |
-|-------------------|--------------------------------------------------|----------------------------------------|---------------------------------------------|--------------------------------------------|
-| DS-01            | Verify sensitive data exposure.                  | Check if `lic_no` is encrypted.        | `lic_no` is encrypted or masked.            | Plain-text `lic_no` is stored or transmitted. |
