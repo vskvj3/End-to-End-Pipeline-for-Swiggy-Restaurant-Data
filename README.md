@@ -18,8 +18,9 @@ This project focuses on building a data engineering pipeline for analyzing resta
 2. PySpark  
 3. Azure Data Factory  
 4. Databricks (for transformations and visualization)  
-5. Azure Data Lake Storage  
-6. Power BI  
+5. Azure Data Lake Storage Gen2
+6. Azure Key Vault
+7. Azure Log Analytics
  
 
 ## Pipeline Workflow  
@@ -46,9 +47,10 @@ restaurant-data-pipeline/
 │   └── swiggy.csv 
 │   └── data.json
 ├── Notebooks/  
-│   ├── ingestion_pipeline.ipynb  
-│   ├── transformation_pipeline.ipynb  
-│   └── sql_queries.ipynb  
+│   ├── extract.ipynb  
+│   ├── transform.ipynb  
+│   ├── aggregate.ipynb  
+│   └── analyze.ipynb 
 ├── Images/  
 │   ├── Architecture/
 │   ├── Screenshots/
