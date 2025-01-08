@@ -70,7 +70,7 @@ The project adopts a **Medallion Architecture** with bronze, silver, and gold da
 | Data Storage         | Azure Data Lake, Azure Delta Tables |
 | Data Transformation  | Databricks, PySpark              |
 | Data Analytics       | Spark SQL                        |
-| Data Visualization   | Power BI                         |
+| Data Visualization   | Databricks Dashboard                         |
 
 ---
 
