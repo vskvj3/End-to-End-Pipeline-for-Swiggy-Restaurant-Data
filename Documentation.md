@@ -5,7 +5,7 @@ The goal of this project is to develop a robust data pipeline that extracts, tra
 - **Azure Data Factory** for data ingestion
 - **Databricks with PySpark** for data transformation
 - **Spark SQL** for analysis
-- **Power BI** for visualization
+- **Databricks with Spark SQL** for visualization
 
 ---
 
