@@ -1,7 +1,7 @@
 # Data Pipeline and Analysis of Restaurant Data
 
 ## Overview  
-This project focuses on building a data engineering pipeline for analyzing restaurant data sourced from various cities by the swiggy platform. The data is processed, transformed, and analyzed using tools including PySpark, Spark SQL, and Azure Data Factory. The final outputs include insights into restaurant ratings, cuisines, and trends presented in dashboards and reports. 
+This project develops a data engineering pipeline to analyze restaurant data from various cities on the Swiggy platform. Using PySpark, Spark SQL, and Azure Data Factory, the data is processed and transformed to generate insights on ratings, cuisines, and trends, presented through databricks dashboard.
 
 > For detailed documentaion See [Technical Design Document](Documentation.md)
 
