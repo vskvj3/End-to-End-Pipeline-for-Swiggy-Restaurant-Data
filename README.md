@@ -6,12 +6,18 @@ This project develops a data engineering pipeline to analyze restaurant data fro
 > For detailed documentaion See [Technical Design Document](Documentation.md)
 
 ## Features  
-- **Data Ingestion**: Data from JSON and other sources is ingested into Azure Data Lake using Azure Data Factory.  
-- **Data Transformation**: PySpark is used to cleanse, transform, and enrich the data.  
-- **Data Quality Assurance**: Techniques to ensure data accuracy and consistency, such as null handling, bias elimination, and integrity validation.  
-- **SQL Analysis**: Spark SQL queries to extract insights and create materialized views.  
-- **Visualization**: Dashboards created using Databricks or Power BI to visualize restaurant trends.  
-- **Audit Logging**: Execution logs for process monitoring stored in Azure Log Analytics or tables.  
+- **Data Ingestion**: Data from JSON sources is ingested into Azure Data Lake using Azure Data Factory.  
+- **Data Transformation**: PySpark is used to cleanse, transform, and aggregate the data.  
+- **Data Quality Assurance**: Techniques to ensure data accuracy and consistency, including null handling, and integrity validation.  
+- **SQL Analysis**: Spark SQL queries to extract insights on delta tables.  
+- **Visualization**: Dashboards created using Databricks to visualize restaurant trends.  
+- **Audit Logging**: Execution logs for process monitoring stored in Azure Log Analytics workspace and tables.  
+
+## Pipeline Overview
+![Pipeline](Images/Screenshots/pipeline.png)
+
+## Dashboard
+![Dashboard](Images/Screenshots/dashboard.png)
 
 ## Tools Used
 1. Python 3.8
@@ -71,4 +77,3 @@ This project is licensed under the The GNU General Public License v3.0. See the 
 - [PySpark Documentation](https://spark.apache.org/docs/latest/api/python/)  
 - [Azure Data Factory Documentation](https://learn.microsoft.com/en-us/azure/data-factory/introduction)  
 - [Databricks Documentation](https://learn.microsoft.com/en-us/azure/databricks/)
-- [Power BI Documentation](https://learn.microsoft.com/en-us/power-bi/)  
